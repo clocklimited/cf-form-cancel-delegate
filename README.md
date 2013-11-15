@@ -15,8 +15,8 @@ var formCancelDelegate = require('cf-form-cancel-delegate')(logger)
 formCancelDelegate.call(view) // Needs to be executed in the context of the view
 ```
 
-Example:
-![Example](https://i.cloudup.com/zfzCpfBDRz-3000x3000.png)
+## Example:
+![Example](https://i.cloudup.com/Q6FUnStL9S-2000x2000.png)
 
 ## Credits
 Built by developers at [Clock](http://clock.co.uk).
