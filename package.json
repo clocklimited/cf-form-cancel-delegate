@@ -1,0 +1,33 @@
+{
+  "author": "Ben Gourley",
+  "name": "cf-form-cancel-delegate",
+  "description": "Show a confirmation dialog if model changes will be lost when navigating from a form",
+  "version": "0.0.0",
+  "tags": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:clocklimited/cf-form-cancel-delegate"
+  },
+  "publishConfig": {
+    "registry": "http://npm.clockte.ch"
+  },
+  "main": "",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint . --reporter=./node_modules/jshint-full-path/index.js",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec -r should",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1",
+    "should": "2",
+    "istanbul": "0",
+    "jshint": "2",
+    "jshint-full-path": "0"
+  }
+}
