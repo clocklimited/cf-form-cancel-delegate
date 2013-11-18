@@ -4,6 +4,7 @@ var mapFormToObject = require('cf-map-form-to-object')
   , modal = require('modal')
   , isEqual = require('lodash.isequal')
   , extend = require('lodash.assign')
+  , BaseModel = require('cf-base-model')
 
 function createDelegate(debug, nofx) {
 
@@ -15,7 +16,7 @@ function createDelegate(debug, nofx) {
 
     // If the model has changed, warn user.
     var formData = mapFormToObject(this.$el.find('form'), this.model.schemata.schema)
-      , newModel = extend({}, this.model.attributes, formData)
+      , newModel = (new BaseModel(extend({}, this.model.attributes, formData)).toJSON())
 
     debug('Cancelling', this.initialModel, newModel)
 

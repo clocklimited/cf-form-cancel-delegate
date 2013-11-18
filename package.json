@@ -23,10 +23,11 @@
     "node": ">=0.8"
   },
   "dependencies": {
-    "modal": "~0.1.6",
+    "cf-base-model": "0.0.1",
     "cf-map-form-to-object": "~0.1.0",
+    "lodash.assign": "~2.3.0",
     "lodash.isequal": "~2.3.0",
-    "lodash.assign": "~2.3.0"
+    "modal": "~0.1.6"
   },
   "devDependencies": {
     "mocha": "1",
@@ -34,7 +35,6 @@
     "istanbul": "0",
     "jshint": "2",
     "jshint-full-path": "0",
-    "cf-base-model": "0.0.1",
     "backbone": "~1.1.0",
     "jsdom": "~0.8.8",
     "jquery-latest": "~1.9.0",
