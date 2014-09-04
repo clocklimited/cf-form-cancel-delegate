@@ -8,15 +8,14 @@ var mapFormToObject = require('cf-map-form-to-object')
 
 function createDelegate(debug, nofx) {
 
-  return function formCancelDelegate() {
+  return function formCancelDelegate(cb) {
 
-    if (!this.initialModel) {
-      throw new Error('Model must have an initialModel property')
-    }
+    if (!this.initialModel) throw new Error('Model must have an initialModel property')
 
     // If the model has changed, warn user.
     var formData = mapFormToObject(this.$el.find('form'), this.model.schemata.schema)
       , newModel = (new BaseModel(extend({}, this.model.attributes, formData)).toJSON())
+      , cbMode = typeof cb === 'function'
 
     debug('Cancelling', this.initialModel, newModel)
 
@@ -26,12 +25,18 @@ function createDelegate(debug, nofx) {
         { title: 'You have unsaved changes'
         , content: 'Would you like to continue editing, or discard these changes?'
         , buttons:
-          [ { text: 'Discard changes', event: 'discard', className: '' }
-          , { text: 'Continue editing', event: 'continue', className: 'btn-primary' }
+          [ { text: 'Continue editing', event: 'continue', className: '' }
+          , { text: 'Discard changes', event: 'discard', className: 'btn-warning' }
           ]
         , fx: !nofx
-        }).on('discard', function () { this.trigger('cancel') }.bind(this))
+        })
+        .on('discard', function () {
+          if (cbMode) return cb(null, true)
+          this.trigger('cancel')
+        }.bind(this))
+        .on('continue', function () { if (cbMode) cb(null, false) })
     } else {
+      if (cbMode) return cb(null, true)
       this.trigger('cancel')
     }
 
