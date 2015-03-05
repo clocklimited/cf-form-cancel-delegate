@@ -25,8 +25,8 @@ function createDelegate(debug, nofx) {
         { title: 'You have unsaved changes'
         , content: 'Would you like to continue editing, or discard these changes?'
         , buttons:
-          [ { text: 'Continue editing', event: 'continue', className: '' }
-          , { text: 'Discard changes', event: 'discard', className: 'btn-warning' }
+          [ { text: 'Continue editing', event: 'continue', className: 'btn btn--success' }
+          , { text: 'Discard changes', event: 'discard', className: 'btn' }
           ]
         , fx: !nofx
         })

@@ -27,7 +27,7 @@
     "cf-map-form-to-object": "~0.1.0",
     "lodash.assign": "~2.3.0",
     "lodash.isequal": "~2.3.0",
-    "modal": "~0.1.6"
+    "modal": "~1.0.0"
   },
   "devDependencies": {
     "mocha": "1",
