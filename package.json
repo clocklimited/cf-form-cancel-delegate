@@ -9,7 +9,7 @@
     "url": "git@github.com:clocklimited/cf-form-cancel-delegate"
   },
   "publishConfig": {
-    "registry": "http://npm.clockte.ch"
+    "registry": "https://registry.npmjs.org"
   },
   "main": "form-cancel-delegate.js",
   "scripts": {
