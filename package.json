@@ -20,26 +20,26 @@
     "prepublish": "npm test && npm prune"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": ">=6.0.0"
   },
   "dependencies": {
-    "cf-base-model": "0.0.1",
-    "cf-map-form-to-object": "~0.1.0",
-    "lodash.assign": "~2.3.0",
-    "lodash.isequal": "~2.3.0",
-    "modal": "~1.0.0"
+    "cf-base-model": "^0.0.1",
+    "cf-map-form-to-object": "^1.0.0",
+    "lodash.isequal": "^2.3.0",
+    "modal": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "1",
-    "should": "2",
+    "backbone": "~1.1.0",
     "istanbul": "0",
+    "jade": "~0.35.0",
+    "jest": "^22.0.0",
+    "jquery-latest": "~1.9.0",
+    "jsdom": "~0.8.8",
     "jshint": "2",
     "jshint-full-path": "0",
-    "backbone": "~1.1.0",
-    "jsdom": "~0.8.8",
-    "jquery-latest": "~1.9.0",
     "lodash": "~2.3.0",
-    "jade": "~0.35.0",
-    "schemata": "0.0.8"
+    "mocha": "1",
+    "schemata": "0.0.8",
+    "should": "2"
   }
 }
