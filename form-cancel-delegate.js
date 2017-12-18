@@ -1,18 +1,18 @@
 module.exports = createDelegate
 
-var mapFormToObject = require('cf-map-form-to-object'),
-  modal = require('modal'),
-  isEqual = require('lodash.isequal'),
-  BaseModel = require('cf-base-model')
+const mapFormToObject = require('cf-map-form-to-object')
+const modal = require('modal')
+const isEqual = require('lodash.isequal')
+const BaseModel = require('cf-base-model')
 
 function createDelegate (debug, nofx) {
   return function formCancelDelegate (cb) {
     if (!this.initialModel) throw new Error('Model must have an initialModel property')
 
     // If the model has changed, warn user.
-    var formData = mapFormToObject(this.$el.find('form'), this.model.schemata.getProperties()),
-      newModel = (new BaseModel(Object.assign({}, this.model.attributes, formData)).toJSON()),
-      cbMode = typeof cb === 'function'
+    const formData = mapFormToObject(this.$el.find('form'), this.model.schemata)
+    const newModel = (new BaseModel(Object.assign({}, this.model.attributes, formData)).toJSON())
+    const cbMode = typeof cb === 'function'
 
     debug('Cancelling', this.initialModel, newModel)
 
@@ -27,11 +27,11 @@ function createDelegate (debug, nofx) {
           ],
           fx: !nofx
         })
-        .on('discard', function () {
+        .on('discard', () => {
           if (cbMode) return cb(null, true)
           this.trigger('cancel')
-        }.bind(this))
-        .on('continue', function () { if (cbMode) cb(null, false) })
+        })
+        .on('continue', () => { if (cbMode) cb(null, false) })
     } else {
       if (cbMode) return cb(null, true)
       this.trigger('cancel')

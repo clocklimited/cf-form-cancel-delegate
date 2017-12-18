@@ -10,7 +10,7 @@
   },
   "main": "form-cancel-delegate.js",
   "scripts": {
-    "lint": "eslint --fix -f unix",
+    "lint": "eslint --fix -f unix .",
     "pretest": "npm run lint",
     "test": "jest",
     "prepublish": "npm test"
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "cf-base-model": "0.0.1",
-    "cf-map-form-to-object": "^0.1.1",
+    "cf-map-form-to-object": "^1.0.0",
     "lodash.isequal": "^4.5.0",
     "modal": "^1.2.0"
   },
