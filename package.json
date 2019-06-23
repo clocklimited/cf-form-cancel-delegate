@@ -24,22 +24,22 @@
   },
   "dependencies": {
     "cf-base-model": "0.0.1",
-    "cf-map-form-to-object": "~0.1.0",
-    "lodash.assign": "~2.3.0",
-    "lodash.isequal": "~2.3.0",
-    "modal": "~1.0.0"
+    "cf-map-form-to-object": "~1.0.0",
+    "lodash.assign": "~4.2.0",
+    "lodash.isequal": "~4.5.0",
+    "modal": "~1.2.0"
   },
   "devDependencies": {
-    "mocha": "1",
-    "should": "2",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3",
     "istanbul": "0",
     "jshint": "2",
-    "jshint-full-path": "0",
-    "backbone": "~1.1.0",
-    "jsdom": "~0.8.8",
+    "jshint-full-path": "^1.1.1",
+    "backbone": "~1.4.0",
+    "jsdom": "~15.1.1",
     "jquery-latest": "~1.9.0",
-    "lodash": "~2.3.0",
-    "jade": "~0.35.0",
-    "schemata": "0.0.8"
+    "lodash": "~4.17.11",
+    "jade": "~1.11.0",
+    "schemata": "7.0.1"
   }
 }
