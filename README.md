@@ -1,5 +1,7 @@
 # cf-form-cancel-delegate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/cf-form-cancel-delegate.svg)](https://greenkeeper.io/)
+
 Show a confirmation dialog if model changes will be lost when navigating from a form
 
 ## Installation
