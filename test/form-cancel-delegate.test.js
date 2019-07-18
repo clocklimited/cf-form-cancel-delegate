@@ -45,6 +45,38 @@ describe('Form cancel delegate', function () {
 
   })
 
+  it('should call the toJSON() method if it exists on the model', function (done) {
+    var isToJsonCalled = false
+      , cancelDelegate = createFormCancelDelegate(noop, true)
+      , Model = BaseModel.extend({ schemata: schemata({ a: { type: Number } }) })
+      , model = new Model({ a: 10 })
+      , $el = $(
+        [ '<div>'
+        , '  <form>'
+        , '    <input name="a" value="10"/>'
+        , '  </form>'
+        , '</div>'
+        ].join(''))
+      , view = new (window.Backbone.View.extend(
+          { initialize: function () {
+              this.initialModel = this.model.toJSON()
+            }
+          }))({ model: model, el: $el[0]  })
+
+          model.toJSON = function() {
+            isToJsonCalled = true
+            return model.attributes
+          }
+
+    view.on('cancel', function () {
+      assert.equal(isToJsonCalled, true, 'toJSON has not been called')
+      done()
+    })
+
+    cancelDelegate.call(view)
+
+  })
+
   it('should show a modal if the model has changed', function () {
 
     var cancelDelegate = createFormCancelDelegate(noop, true)
