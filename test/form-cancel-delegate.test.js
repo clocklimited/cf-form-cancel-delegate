@@ -102,6 +102,48 @@ describe('Form cancel delegate', () => {
     assert($('.modal-overlay').length)
   })
 
+  test('should call the toJSON() method if it exists on the model', done => {
+    let isToJsonCalled = false
+    const cancelDelegate = createFormCancelDelegate(noop, true)
+
+    const Model = BaseModel.extend({
+      schemata: namedSchemata({
+        a: {
+          type: Number
+        }
+      })
+    })
+
+    const model = new Model({ a: 10 })
+
+    const $el = $(
+      [ '<div>',
+        '  <form>',
+        '    <input name="a" value="10"/>',
+        '  </form>',
+        '</div>'
+      ].join(''))
+
+    const view = new (window.Backbone.View.extend({
+      initialize () {
+        this.initialModel = this.model.toJSON()
+      }
+    }))({
+      model: model, el: $el[0]
+    })
+    model.toJSON = function () {
+      isToJsonCalled = true
+      return model.attributes
+    }
+
+    view.on('cancel', function () {
+      assert.equal(isToJsonCalled, true, 'toJSON has not been called')
+      done()
+    })
+
+    cancelDelegate.call(view)
+  })
+
   test('should discard changes if discard button is pressed', done => {
     const cancelDelegate = createFormCancelDelegate(noop, true)
 

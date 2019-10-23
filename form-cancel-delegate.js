@@ -11,7 +11,8 @@ function createDelegate (debug, nofx) {
 
     // If the model has changed, warn user.
     const formData = mapFormToObject(this.$el.find('form'), this.model.schemata)
-    const newModel = (new BaseModel(Object.assign({}, this.model.attributes, formData)).toJSON())
+    const plainModel = this.model.toJSON ? this.model.toJSON() : this.model.attributes
+    const newModel = (new BaseModel(Object.assign({}, plainModel, formData)).toJSON())
     const cbMode = typeof cb === 'function'
 
     debug('Cancelling', this.initialModel, newModel)
