@@ -2,6 +2,10 @@
 
 Show a confirmation dialog if model changes will be lost when navigating from a form
 
+## WARNING
+
+From 3.0.0 your project will require at least `schemata@6`
+
 ## Installation
 
     npm install --save cf-form-cancel-delegate
