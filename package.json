@@ -11,7 +11,7 @@
   },
   "main": "form-cancel-delegate.js",
   "scripts": {
-    "lint": "eslint --fix -f unix .",
+    "lint": "eslint -f unix .",
     "pretest": "npm run lint",
     "test": "jest",
     "prepublish": "npm test"
