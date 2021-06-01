@@ -19,15 +19,15 @@ function createDelegate (debug, nofx) {
 
     // Model must have an initial model for this to work
     if (!isEqual(this.initialModel, newModel)) {
-      modal(
-        { title: 'You have unsaved changes',
-          content: 'Would you like to continue editing, or discard these changes?',
-          buttons:
-          [ { text: 'Continue editing', event: 'continue', className: 'btn btn--success' },
-            { text: 'Discard changes', event: 'discard', className: 'btn' }
-          ],
-          fx: !nofx
-        })
+      modal({
+        title: 'You have unsaved changes',
+        content: 'Would you like to continue editing, or discard these changes?',
+        buttons:
+        [ { text: 'Continue editing', event: 'continue', className: 'btn btn--success' },
+          { text: 'Discard changes', event: 'discard', className: 'btn' }
+        ],
+        fx: !nofx
+      })
         .on('discard', () => {
           if (cbMode) return cb(null, true)
           this.trigger('cancel')
