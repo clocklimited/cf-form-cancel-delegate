@@ -3,6 +3,7 @@
   "name": "@clocklimited/cf-form-cancel-delegate",
   "description": "Show a confirmation dialog if model changes will be lost when navigating from a form",
   "version": "3.0.1",
+  "license": "BSD-2-Clause",
   "tags": [],
   "files": [
     "form-cancel-delegate.js"
