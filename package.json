@@ -1,16 +1,20 @@
 {
   "author": "Ben Gourley",
-  "name": "cf-form-cancel-delegate",
+  "name": "@clocklimited/cf-form-cancel-delegate",
   "description": "Show a confirmation dialog if model changes will be lost when navigating from a form",
   "version": "3.0.1",
+  "license": "BSD-2-Clause",
   "tags": [],
+  "files": [
+    "form-cancel-delegate.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:clocklimited/cf-form-cancel-delegate"
   },
   "main": "form-cancel-delegate.js",
   "scripts": {
-    "lint": "eslint --fix -f unix .",
+    "lint": "eslint -f unix .",
     "pretest": "npm run lint",
     "test": "jest",
     "prepublish": "npm test"
@@ -19,25 +23,24 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "@clocklimited/cf-map-form-to-object": "^2.0.0",
     "cf-base-model": "0.0.1",
-    "cf-map-form-to-object": "^1.0.0",
     "lodash.isequal": "^4.5.0",
     "modal": "^1.2.0"
   },
   "devDependencies": {
+    "@clocklimited/schemata": "^8.0.0",
     "backbone": "~1.1.0",
-    "eslint": "^4.13.1",
-    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
     "jade": "^1.11.0",
     "jest": "^22.0.0",
-    "jquery-latest": "~1.9.0",
     "jsdom": "^11.5.1",
-    "lodash": "^4.17.4",
-    "schemata": "^6.0.0"
+    "lodash": "^4.17.4"
   },
   "jest": {
     "testEnvironment": "node"
