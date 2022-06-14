@@ -2,7 +2,7 @@
   "author": "Ben Gourley",
   "name": "@clocklimited/cf-form-cancel-delegate",
   "description": "Show a confirmation dialog if model changes will be lost when navigating from a form",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "license": "BSD-2-Clause",
   "tags": [],
   "files": [
