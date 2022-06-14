@@ -30,6 +30,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@clocklimited/cf-map-form-to-object@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@clocklimited/cf-map-form-to-object/-/cf-map-form-to-object-2.0.0.tgz#4aeabaae1a7720a936607f08c9f554c4ef2523d6"
+  integrity sha512-KuCbWPIhuQqfKuB4H+HD0cDRUb+Yn7c0UCs5XHF88eUPNzr576f7OvbMPKPj4coLCtCCu1jZQZfkkKNG/DEnHA==
+
 "@eslint/eslintrc@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.1.tgz#442763b88cecbe3ee0ec7ca6d6dd6168550cbf14"
@@ -657,13 +662,6 @@ cf-base-model@0.0.1:
   integrity sha1-YESOcgoAzm3hcWOKPXj6WJ8cPZM=
   dependencies:
     lodash.clonedeep "~2.3.0"
-
-cf-map-form-to-object@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/cf-map-form-to-object/-/cf-map-form-to-object-1.0.0.tgz#2ceb3e1a045b01feb7dac14f152c720e4629e8a0"
-  integrity sha1-LOs+GgRbAf632sFPFSxyDkYp6KA=
-  dependencies:
-    schemata "^6.0.0"
 
 chalk@^1.1.3:
   version "1.1.3"

@@ -23,8 +23,8 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "@clocklimited/cf-map-form-to-object": "^2.0.0",
     "cf-base-model": "0.0.1",
-    "cf-map-form-to-object": "^1.0.0",
     "lodash.isequal": "^4.5.0",
     "modal": "^1.2.0"
   },

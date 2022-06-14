@@ -1,6 +1,6 @@
 module.exports = createDelegate
 
-const mapFormToObject = require('cf-map-form-to-object')
+const mapFormToObject = require('@clocklimited/cf-map-form-to-object')
 const modal = require('modal')
 const isEqual = require('lodash.isequal')
 const BaseModel = require('cf-base-model')
