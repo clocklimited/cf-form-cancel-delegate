@@ -3,7 +3,7 @@ require('./test-env')
 const createFormCancelDelegate = require('../')
 const assert = require('assert')
 const BaseModel = require('cf-base-model')
-const schemata = require('schemata')
+const schemata = require('@clocklimited/schemata')
 
 const namedSchemata = properties => schemata({
   name: 'Test',

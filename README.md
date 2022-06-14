@@ -1,14 +1,14 @@
-# cf-form-cancel-delegate
+# @clocklimited/cf-form-cancel-delegate
 
 Show a confirmation dialog if model changes will be lost when navigating from a form
 
 ## WARNING
 
-From 3.0.0 your project will require at least `schemata@6`
+From 4.0.0 your project will require at least `schemata@8`
 
 ## Installation
 
-    npm install --save cf-form-cancel-delegate
+    npm install --save @clocklimited/cf-form-cancel-delegate
 
 ## Usage
 

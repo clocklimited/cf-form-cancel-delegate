@@ -35,6 +35,15 @@
   resolved "https://registry.yarnpkg.com/@clocklimited/cf-map-form-to-object/-/cf-map-form-to-object-2.0.0.tgz#4aeabaae1a7720a936607f08c9f554c4ef2523d6"
   integrity sha512-KuCbWPIhuQqfKuB4H+HD0cDRUb+Yn7c0UCs5XHF88eUPNzr576f7OvbMPKPj4coLCtCCu1jZQZfkkKNG/DEnHA==
 
+"@clocklimited/schemata@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@clocklimited/schemata/-/schemata-8.0.0.tgz#42588dc92667c4c84fcde28a7aa0c302c0df62f2"
+  integrity sha512-Eqfme5rPK0D9diPiDFffz41YsEMsn0TZntgS39F7NGzPegMQHFAAG5CyiHoan0U2wuVQuMk4F+6HHgCKCZko4w==
+  dependencies:
+    is-primitive "^3.0.0"
+    lodash.clonedeep "^4.5.0"
+    util.promisify "^1.1.1"
+
 "@eslint/eslintrc@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.1.tgz#442763b88cecbe3ee0ec7ca6d6dd6168550cbf14"
@@ -309,7 +318,7 @@ async-limiter@~1.0.0:
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
 
-async@^2.1.4, async@^2.6.0:
+async@^2.1.4:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
   integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
@@ -3504,11 +3513,6 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
-piton-string-utils@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/piton-string-utils/-/piton-string-utils-0.3.0.tgz#597ef387ad10370e85d4afeda4e48bb164692fa1"
-  integrity sha1-WX7zh60QNw6F1K/tpOSLsWRpL6E=
-
 pkg-dir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
@@ -3880,16 +3884,6 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
-schemata@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/schemata/-/schemata-6.0.0.tgz#24bf84a12d2d466e3131587c53221db83dd85f49"
-  integrity sha1-JL+EoS0tRm4xMVh8UyIduD3YX0k=
-  dependencies:
-    async "^2.6.0"
-    is-primitive "^3.0.0"
-    lodash.clonedeep "^4.5.0"
-    piton-string-utils "^0.3.0"
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.5.0:
   version "5.7.1"
@@ -4486,7 +4480,7 @@ util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-util.promisify@^1.0.0:
+util.promisify@^1.0.0, util.promisify@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/util.promisify/-/util.promisify-1.1.1.tgz#77832f57ced2c9478174149cae9b96e9918cd54b"
   integrity sha512-/s3UsZUrIfa6xDhr7zZhnE9SLQ5RIXyYfiVnMMyMDzOc8WhWN4Nbh36H842OyurKbCDAesZOJaVyvmSl6fhGQw==
